@@ -26,8 +26,6 @@ ln -s ~/.dotfiles/.gitconfig ~/.gitconfig
 echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> /Users/mariosouto/.profile && eval "$(/opt/homebrew/bin/brew shellenv)"
 brew bundle --file ~/.dotfiles/Brewfile
 
-### Finalização
-cd ~ && mkdir ./dev
 ```
 
 ## How to extract current installed files?
