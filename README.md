@@ -14,7 +14,7 @@ rm -rf ~/.zshrc
 /usr/sbin/softwareupdate --install-rosetta --agree-to-license
 
 ### Setup dot dotfiles
-git clone --recurse-submodules https://github.com/omariosouto/dotfiles.git ~/.dotfiles
+git clone --recurse-submodules https://github.com/GersonDantas/dotfiles.git ~/.dotfiles
 cd ~/.dotfiles
 ln -s ~/.dotfiles/.zshrc ~/.zshrc
 ln -s ~/.dotfiles/.gitconfig ~/.gitconfig
@@ -23,9 +23,6 @@ ln -s ~/.dotfiles/.gitconfig ~/.gitconfig
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> /Users/mariosouto/.profile && eval "$(/opt/homebrew/bin/brew shellenv)"
 brew bundle --file ~/.dotfiles/Brewfile
-
-#### Java Fixes
-sudo ln -sfn /opt/homebrew/opt/openjdk/libexec/openjdk.jdk /Library/Java/JavaVirtualMachines/openjdk.jdk
 
 ### Finalização
 cd ~ && mkdir ./dev
