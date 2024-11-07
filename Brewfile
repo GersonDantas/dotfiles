@@ -1,7 +1,7 @@
 tap "homebrew/bundle"
 tap "homebrew/services"
 brew "bat"
-brew "colima"
+brew "colima", restart_service: true
 brew "docker"
 brew "docker-compose"
 brew "fzf"
