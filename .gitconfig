@@ -1,3 +1,29 @@
 [safe]
 	directory = /Users/gersondantasdossantos/.oh-my-zsh
+	
+[user]
+	name = gersondantas
+	email = 53773325+GersonDantas@users.noreply.github.com
+	signingKey = ""
+[core]
+	editor = code --wait
+[push]
+	followTags = true
+	autoSetupRemote = true
+[alias] 
+	delete-many-branchs = "!f() { branches_to_keep=\"$1\"; git for-each-ref --format='%(refname:short)' refs/heads/ | grep -Ev \"$branches_to_keep\" | xargs -r git branch -D; }; f"
+	c = !git add --all && git commit -m 
+	s = !git status -s
+	l = !git log --pretty=format:'%C(blue)%h%C(red)%d %C(white)%s - %C(cyan)%cn, %C(green)%cr'
+	t = !sh -c 'git tag -a $1 -m $1' -
+	amend = !git add --all && git commit --amend --no-edit
+	count = !git shortlog -s --grep
+	d-c = !git config credential.helper store
+	c-c = !git config credential.helper cache
 
+[gpg]
+	program = gpg
+[commit]
+	gpgSign = false
+[tag]
+	forceSignAnnotated = false
