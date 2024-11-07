@@ -10,8 +10,10 @@ sudo sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/ins
 git clone https://github.com/lukechilds/zsh-nvm ~/.oh-my-zsh/custom/plugins/zsh-nvm 
 rm -rf ~/.zshrc
 
-### Install rosetta
-/usr/sbin/softwareupdate --install-rosetta --agree-to-license
+### Install Powerlevel10k
+
+#### Clone the repository:
+git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
 
 ### Setup dot dotfiles
 git clone --recurse-submodules https://github.com/GersonDantas/dotfiles.git ~/.dotfiles
@@ -26,12 +28,6 @@ brew bundle --file ~/.dotfiles/Brewfile
 
 ### Finalização
 cd ~ && mkdir ./dev
-```
-
-## Post install
-```sh
-#### Flutter Specific
-flutter doctor --android-licenses
 ```
 
 ## How to extract current installed files?
