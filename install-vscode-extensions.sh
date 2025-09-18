@@ -1,0 +1,81 @@
+#!/bin/bash
+
+# Script para instalar todas as extensões do VS Code listadas no Brewfile
+echo "🚀 Instalando extensões do VS Code..."
+
+# Lista de extensões extraídas do Brewfile
+extensions=(
+    "adpyke.codesnap"
+    "chakrounanas.turbo-console-log"
+    "christian-kohler.path-intellisense"
+    "clinyong.vscode-css-modules"
+    "cpylua.language-postcss"
+    "dbaeumer.vscode-eslint"
+    "dracula-theme.theme-dracula"
+    "eamodio.gitlens"
+    "editorconfig.editorconfig"
+    "esbenp.prettier-vscode"
+    "fallenmax.styled-components-extractor"
+    "formulahendry.auto-close-tag"
+    "formulahendry.auto-rename-tag"
+    "formulahendry.code-runner"
+    "funkyremi.vscode-google-translate"
+    "github.codespaces"
+    "github.copilot"
+    "github.copilot-chat"
+    "github.remotehub"
+    "gitlab.gitlab-workflow"
+    "golang.go"
+    "hediet.vscode-drawio"
+    "jasonn-porch.gitlab-mr"
+    "kisstkondoros.vscode-gutter-preview"
+    "mechatroner.rainbow-csv"
+    "mhutchie.git-graph"
+    "mikestead.dotenv"
+    "misterj.vue-volar-extention-pack"
+    "mrmlnc.vscode-duplicate"
+    "ms-azuretools.vscode-docker"
+    "ms-playwright.playwright"
+    "ms-python.debugpy"
+    "ms-python.isort"
+    "ms-python.python"
+    "ms-python.vscode-pylance"
+    "ms-toolsai.jupyter"
+    "ms-toolsai.jupyter-keymap"
+    "ms-toolsai.jupyter-renderers"
+    "ms-toolsai.vscode-jupyter-cell-tags"
+    "ms-toolsai.vscode-jupyter-slideshow"
+    "ms-vscode-remote.remote-containers"
+    "ms-vscode.remote-repositories"
+    "natqe.reload"
+    "naumovs.color-highlight"
+    "oderwat.indent-rainbow"
+    "pkief.material-icon-theme"
+    "redhat.vscode-xml"
+    "ryu1kn.partial-diff"
+    "saoudrizwan.claude-dev"
+    "sdras.vue-vscode-snippets"
+    "sibiraj-s.vscode-scss-formatter"
+    "simonsiefke.svg-preview"
+    "streetsidesoftware.code-spell-checker"
+    "styled-components.vscode-styled-components"
+    "syler.sass-indented"
+    "sysoev.language-stylus"
+    "ukoloff.win-ca"
+    "visualstudioexptteam.intellicode-api-usage-examples"
+    "visualstudioexptteam.vscodeintellicode"
+    "vue.volar"
+    "wallabyjs.quokka-vscode"
+    "xabikos.javascriptsnippets"
+)
+
+# Instalar cada extensão
+for extension in "${extensions[@]}"; do
+    echo "📦 Instalando: $extension"
+    code --install-extension "$extension" --force
+done
+
+echo "✅ Todas as extensões foram instaladas!"
+echo "🔄 Reinicie o VS Code para garantir que todas as extensões sejam carregadas corretamente."
+
+
